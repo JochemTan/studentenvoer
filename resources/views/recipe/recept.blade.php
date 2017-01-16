@@ -54,17 +54,33 @@
     </a>
     <ul>
       <li><a class="btn-floating yellow" href="/recept/edit/{{ $recipe->id }}"><i class="material-icons">mode_edit</i></a></li>
-      <li><a class="btn-floating red darken-1" href="/recept/delete/{{ $recipe->id }}"><i class="material-icons">delete</i></a></li>
+      <li><a class="btn-floating red darken-1" href="#modal1"><i class="material-icons">delete</i></a></li>
     </ul>
   </div>
   @endif
 </div>
+
+<div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Verwijder dit recept?</h4>
+      <p>Weet je zeker dat je dit gerecht wilt verwijderen</p>
+    </div>
+    <div class="modal-footer">
+      <form method="post" action="/recipe/delete/{{ $recipe->id }}">
+        {{ csrf_field() }}
+        <button type="submit" class=" modal-action modal-close waves-effect red-text btn-flat">Verwijder</a>
+        </button>
+      </form>
+      <button type="submit" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+    </div>
+  </div>
 
 @endsection
 
 @section('js')
   <script>
     $(document).ready(function(){
+      $('.modal').modal();
       $('.fixed-action-btn').openFAB();
   $('.fixed-action-btn').closeFAB();
   $('.fixed-action-btn.toolbar').openToolbar();

@@ -21,11 +21,16 @@ $(document).ready(function(){
 		}
 	});
 // adding steps
-	var count = 1;
+	// var count = 1;
+	var sum = Number($('.steps .row .stepnumber').last().text());
+	var count = sum + 1;
+	
 	$('.addstep').click(function(e){
 		e.preventDefault();
 		
 		$('.steps').append('<div class="row"><div class="col-md-1"><div class="stepnum"><h5>'+count+'</h5></div></div><div class="col-md-6"><div class="textarea "><textarea class="materialize-textarea" placeholder="Beschrijf de stap" name="step[]" id="'+count+'" cols="30" rows="3"></textarea></div></div></div>');
 		count++;
 	});
+
+
 });

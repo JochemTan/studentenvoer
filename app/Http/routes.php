@@ -19,4 +19,7 @@ Route::post('/addrecipe','RecipeController@create');
 
 Route::get('/mijnrecept','RecipeController@myRecipe');
 Route::get('/recept/edit/{id}','RecipeController@edit');
+Route::post('/recept/edit/{id}','RecipeController@update');
+// delete recept
+Route::post('/recipe/delete/{id}','RecipeController@delete');
 Route::auth();
