@@ -34,3 +34,9 @@ row img{
   float: left;
   margin-right: 50px;
 }
+.icon{
+  display: inline-block;
+  float: left;
+  margin-top: 3px;
+  margin-right: 7px;
+}

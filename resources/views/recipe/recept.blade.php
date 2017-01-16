@@ -6,6 +6,8 @@
     <div class="col s12 m4">
       <img src="{{ $recipe->afbeelding }}" class="image">
       <h5>{{ $recipe->naam }}</h5>
+      <i class="material-icons icon">av_timer</i><p>{{ $recipe->bereidingstijd }}</p>
+      <i class="material-icons icon">assignment_ind</i><p>{{ $recipe->personen }} personen</p>
       <ul class="collection">
       	<li class="collection-item"><b>Ingredienten:</b></li>
         @foreach($ingredients as $ingredient)
