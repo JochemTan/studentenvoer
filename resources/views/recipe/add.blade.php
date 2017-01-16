@@ -18,6 +18,20 @@
 					<textarea name="beschrijving" class="extraTextarea materialize-textarea" placeholder="beschrijving" cols="30" rows="10"></textarea>
 					<input type="text" name="bereidingstijd" placeholder="bereidingstijd">
 					<input type="text" name="personen" placeholder="aantal personen">
+					<input type="text" name="image" placeholder="Voeg een afbeelding url toe">
+  					<div class="input-field">
+    <select name="keuken">
+      <option value="0" disabled selected>Kies een keuken</option>
+      @foreach($keuken as $tag)
+		<option value="{{ $tag->id }}">{{ $tag->naam }}</option>
+      @endforeach
+      {{-- <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option> --}}
+    </select>
+    <label>Materialize Select</label>
+  </div>
+        
 			</div>
 		</div>
 		</div>
@@ -48,5 +62,10 @@
 
 @endsection
 @section('js')
+<script>
+     $(document).ready(function() {
+    $('select').material_select();
+  });
+</script>
 <script src="/js/main.js"></script>
 @endsection

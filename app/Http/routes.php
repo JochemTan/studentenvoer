@@ -16,4 +16,7 @@ Route::get('/','RecipeController@overview');
 Route::get('/recipe/{id}','RecipeController@index');
 Route::get('/addrecipe','RecipeController@add');
 Route::post('/addrecipe','RecipeController@create');
+
+Route::get('/mijnrecept','RecipeController@myRecipe');
+Route::get('/recept/edit/{id}','RecipeController@edit');
 Route::auth();

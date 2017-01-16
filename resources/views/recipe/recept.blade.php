@@ -6,6 +6,11 @@
     <div class="col s12 m4">
       <img src="{{ $recipe->afbeelding }}" class="image">
       <h5>{{ $recipe->naam }}</h5>
+      @if(!$recipe->keuken_id == 0)
+        <div class="chip">{{ $recipe->keuken->naam }}</div>
+          <br>
+      @endif
+    
       <i class="material-icons icon">av_timer</i><p>{{ $recipe->bereidingstijd }}</p>
       <i class="material-icons icon">assignment_ind</i><p>{{ $recipe->personen }} personen</p>
       <ul class="collection">
@@ -42,6 +47,28 @@
 
     </div>
   </div>
+  @if($recipe->user_id == Auth::user()->id)
+    <div class="fixed-action-btn horizontal">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">menu</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating yellow" href="/recept/edit/{{ $recipe->id }}"><i class="material-icons">mode_edit</i></a></li>
+      <li><a class="btn-floating red darken-1" href="/recept/delete/{{ $recipe->id }}"><i class="material-icons">delete</i></a></li>
+    </ul>
+  </div>
+  @endif
 </div>
 
+@endsection
+
+@section('js')
+  <script>
+    $(document).ready(function(){
+      $('.fixed-action-btn').openFAB();
+  $('.fixed-action-btn').closeFAB();
+  $('.fixed-action-btn.toolbar').openToolbar();
+  $('.fixed-action-btn.toolbar').closeToolbar();
+    });
+  </script>
 @endsection

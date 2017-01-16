@@ -22,6 +22,8 @@ class CreateReceptTable extends Migration
             $table->string('personen');
             $table->string('afbeelding');
             $table->integer('rating');
+            $table->integer('keuken_id');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }

@@ -187,7 +187,7 @@
             </div>
           </div>
           <div class="row">
-            <button type="submit" class="waves-effect green lighten-2 btn">Inloggen</button>
+            <button type="submit" class="waves-effect green lighten-2 btn">Registreer</button>
           </div>
         </form>
       </div>

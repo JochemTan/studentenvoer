@@ -8,8 +8,9 @@
   <!-- ICONS -->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- CSS -->
-  <link rel="stylesheet" href="/css/style.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/style.css">
   @yield('css')
   <!-- FONT -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
@@ -23,7 +24,7 @@
   <!-- Standard navigation -->
   <ul id="dropdown1" class="dropdown-content">
   <li><a href="/addrecipe">Toevoegen</a></li>
-  <li><a href="#!">mijn recepten</a></li>
+  <li><a href="/mijnrecept">mijn recepten</a></li>
   <li class="divider"></li>
   <li><a href="#!">three</a></li>
 </ul>
