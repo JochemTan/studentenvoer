@@ -21,6 +21,12 @@
 </head>
 <body>
   <!-- Standard navigation -->
+  <ul id="dropdown1" class="dropdown-content">
+  <li><a href="/addrecipe">Toevoegen</a></li>
+  <li><a href="#!">mijn recepten</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">three</a></li>
+</ul>
   <nav class="green lighten-2">
 
      <div class="nav-wrapper ">
@@ -33,9 +39,10 @@
            <li><a href="/login">Login</a></li>
            <li><a href="/register">Registreer</a></li>
          @elseif(Auth::user())
+          
           <li><a href="/logout">Logout</a></li>
-
-          <li><a href="">{{ Auth::user()->name }}</a></li>
+          {{-- <li><a href="">{{ Auth::user()->name }}</a></li> --}}
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Recept<i class="material-icons right">arrow_drop_down</i></a></li>
          @endif
        </ul>
      </div>
@@ -53,6 +60,12 @@
       </div></li>
       {{-- <li><a href="#!"><i class="material-icons">cloud</i>My profile</a></li> --}}
       <li><a href="/">Overview</a></li>
+      <li><div class="divider"></div></li>
+          <li><a class="subheader">Recept</a></li>
+          <li><a class="waves-effect" href="/addrecipe">toevoegen</a></li>
+          {{-- Moet linken naar: MIjn recepten --}}
+          <li><a class="waves-effect" href="#!">overzicht</a></li>
+          <li><div class="divider"></div></li>
       <li><a href="/logout">Logout</a></li>
 {{--       <li><div class="divider"></div></li>
       <li><a class="subheader">Subheader</a></li>
