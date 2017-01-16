@@ -11,6 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(recept_table_seeder::class);
+        $this->call(keuken_table_seeder::class);
     }
 }
