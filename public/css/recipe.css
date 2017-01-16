@@ -1,0 +1,63 @@
+.form{
+  display: block;
+ /* width: 300px;*/
+}
+.form input[type=email], input[type=password],input[type=text]{
+  width: 90%;
+  padding: 12px 5px;
+  display: block;
+  text-align: left;
+  background-color: #F3F5F6;
+  margin-bottom: 13px;
+  /*color: #AAAFC6;*/
+  color: black;
+  font-weight: 400;
+  font-size:14px;
+  border: 1px solid #c5ced3;
+  border-radius: 3px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+}
+.form textarea{
+  background-color: #F3F5F6;
+  border: 1px solid #c5ced3;
+  padding: 12px 5px;
+  margin-bottom: 10px;
+ /* width: 90%;*/
+  border-radius: 3px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+.form textarea:focus{
+  outline: none;
+}
+.form input:focus{
+  outline: none;
+} 
+.added-input input{
+  width: 44%;
+  margin-right: 9px;
+  display: inline;
+}
+@media (max-width: 800px){
+  .step{
+    
+  }
+}
+.extraTextarea{
+  width: 90%;
+}
+.inline h3{
+  display: inline;
+  margin-right: 18px;
+}
+.inline button{
+  display: inline;
+  margin-bottom: 7px;
+}
+@media screen and (max-width: 560px ) {
+.added-input input{
+    width: 90%;
+  }
+}

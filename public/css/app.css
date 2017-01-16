@@ -1,0 +1,100 @@
+
+/*# sourceMappingURL=app.css.map */
+/* font grey AAAFC6 */
+/* background grey F3F5F6 */
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
+
+/* Home blade php */
+.wrapper {
+
+  width: 1440px;
+  max-width: 90%;
+  margin: 0px auto;
+}
+
+.logo-text h1{
+  float: left;
+  /*margin: 0 0 0 1rem;*/
+  text-transform: uppercase;
+  padding-top: 15px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.nav{
+  float: right;
+  padding-top: 40px;
+}
+.nav a{
+  color: #9592ad;
+  margin-left: 1em;
+  text-decoration: none;
+  font-size: 14px;
+}
+a.nameuser{
+  color: #34314c;
+  font-size: 16px;
+}
+.clearfix{
+  clear: both;
+}
+/* Recipe */
+.recipe-description{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+.tag{
+  font-weight: bold;
+}
+.recipe-button{
+  border: none;
+  background-color: #494949;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  display: block;
+  margin: 0px auto;
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+}
+.right{
+  float: right;
+}
+/* Recipe page */
+.content{
+  margin-left: 20px;
+}
+.step-size{
+  width: 30px;
+  font-size: 36px;
+  /*border-right: 2px solid black;*/
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.step{
+  margin-left: -60px;
+  padding: 7px;
+  font-size: 14px;
+}
+.list{
+  font-size: 13px;
+}
+.needings{
+  font-size: 17px;
+}
+.form input{
+  display: block;
+}
+@media(max-width: 800px){
+  .step{
+    margin-left: 0px;
+  }
+}

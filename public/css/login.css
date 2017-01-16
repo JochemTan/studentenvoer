@@ -1,0 +1,73 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
+.logo{
+  /*font-size: 24pt;*/
+  /*color: #F17F42;*/
+  font-size: 36px;
+  text-align: center;
+}
+.content{
+  width: 250px;
+  margin: 150px auto;
+}
+.content input[type=email], input[type=password],input[type=text]{
+  width: 90%;
+  padding: 12px 5px;
+  display: block;
+  margin: 0px auto;
+  text-align: center;
+  background-color: #F3F5F6;
+  margin-bottom: 13px;
+  /*color: #AAAFC6;*/
+  color: black;
+  font-weight: 400;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+
+}
+.content input:focus{
+  outline: none;
+}
+.checkbox input[type=checkbox]{
+  display: none;
+}
+.standard-button{
+  background-color: #9592ad;
+  border: none;
+  padding: 12px 5px;
+  display: block;
+  margin: 0px auto;
+  width: 60%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  border-radius: 3px;
+}
+.standard-button:focus{
+  outline: none;
+}
+.standard-button:hover{
+  cursor: pointer;
+}
+.i-forgot{
+  text-align: center;
+  margin-top: 10px;
+
+
+}
+.i-forgot a{
+    text-decoration: none;
+}
+.bitTop{
+  margin-top: 10px;
+}
+.custom-help{
+  margin-left: 6px;
+  margin-bottom: 2px;
+}
