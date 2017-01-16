@@ -12,13 +12,13 @@ class keuken_table_seeder extends Seeder
      */
     public function run()
     {
-        Create::keuken(array(
+        Keuken::create(array(
         	'naam' => 'Italiaans',
         ));
-        Create::keuken(array(
+        Keuken::create(array(
         	'naam' => 'Mexicaans',
         ));
-        Create::keuken(array(
+        Keuken::create(array(
         	'naam' => 'Japans',
         ));
     }
