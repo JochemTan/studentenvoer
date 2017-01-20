@@ -50,9 +50,9 @@
 
     </div>
   </div>
-      {{-- {{         dd(Auth::user()) }} --}}
-  @if($recipe->user_id == Auth::user()->id)
-
+      
+  @if(Auth::user())
+    @if($recipe->user_id == Auth::user()->id)
     <div class="fixed-action-btn horizontal">
     <a class="btn-floating btn-large red">
       <i class="large material-icons">menu</i>
@@ -63,6 +63,7 @@
       <li><a class="btn-floating red darken-1" href="#modal1"><i class="material-icons">delete</i></a></li>
     </ul>
   </div>
+  @endif
   @endif
 </div>
 

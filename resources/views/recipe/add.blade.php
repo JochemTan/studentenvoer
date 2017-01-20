@@ -8,17 +8,27 @@
 	<form action="/addrecipe" method="post">	
 
 				{{ csrf_field() }}
+				
 	<div class="container">
 		<div class="card-panel">
+
+		@if (count($errors) > 0)
+
+            <ul style="margin-bottom:20px;">
+                @foreach ($errors->all() as $error)
+                    <li class="red-text">{{ $error }}</li>
+                @endforeach
+            </ul>
+          @endif
 		<div class="recept">
 			<h5>Voeg hier je recept toe</h5>
 
 			<div class="form">
-					<input type="text" name="naam" placeholder="naam">
-					<textarea name="beschrijving" class="extraTextarea materialize-textarea" placeholder="beschrijving" cols="30" rows="10"></textarea>
-					<input type="text" name="bereidingstijd" placeholder="bereidingstijd">
-					<input type="text" name="personen" placeholder="aantal personen">
-					<input type="text" name="image" placeholder="Voeg een afbeelding url toe">
+					<input type="text" name="naam" placeholder="naam" value="{{ old('naam') }}">
+					<textarea name="beschrijving" class="extraTextarea materialize-textarea" placeholder="beschrijving" cols="30" rows="10">{{ old('beschrijving') }}</textarea>
+					<input type="text" name="bereidingstijd" placeholder="bereidingstijd" value="{{ old('bereidingstijd') }}">
+					<input type="text" name="personen" placeholder="aantal personen" value="{{ old('personen') }}">
+					<input type="text" name="image" placeholder="Voeg een afbeelding url toe" value="{{ old('image') }}">
   					<div class="input-field">
     <select name="keuken">
       <option value="0" disabled selected>Kies een keuken</option>
@@ -29,7 +39,7 @@
       <option value="2">Option 2</option>
       <option value="3">Option 3</option> --}}
     </select>
-    <label>Materialize Select</label>
+    <label>Keuken</label>
   </div>
         
 			</div>
@@ -39,8 +49,8 @@
 		<div class="card-panel">
 			<h5>Ingrediënten</h5>
 				<div class="control-group" id="inputs">
-					<input type="text" placeholder="voeg ingredient toe en druk op enter" class="ingredient">
-
+					<input type="text" placeholder="voeg ingredient (geen hoeveelheid) toe en druk op enter" class="ingredient">
+					{{-- {{ old('ingredient') }} --}}
 				</div>
 					
 		</div>

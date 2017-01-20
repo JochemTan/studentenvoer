@@ -5,7 +5,7 @@
 <div class="container m12">
   <h4>Popular Recipes</h4>
   <br>
-  @php $count = 0; @endphp
+  {{-- @php $count = 0; @endphp --}}
   <div class="row">
    @foreach($all as $single)
     <div class="col s12 m4">
@@ -26,12 +26,13 @@
         </div>
       </div>
     </div>
-    @php $count++ @endphp
+  {{--   @php $count++ @endphp
     @if($count % 4 == 0)
       </div>
       <div class="row">
-    @endif
+    @endif --}}
   @endforeach
+  </div>
   </div>
 </div>
 @endsection

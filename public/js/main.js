@@ -9,7 +9,7 @@ $(document).ready(function(){
 		if(e.which == 13){
 			e.preventDefault();
 			var value = $('.ingredient').val();
-			$('#inputs').append('<div class="added-input"><input class="ingredient-input " type="text" name="ingredient[]" value="'+value + '" placeholder="ingredient" required><input class="amount" type="text" name="amount[]" placeholder="amount"></div>');
+			$('#inputs').append('<div class="added-input"><input class="ingredient-input " type="text" name="ingredient[]" value="'+value + '" placeholder="ingredient" required><input class="amount" type="text" name="amount[]" placeholder="hoeveelheid + gram (bijv: 200 gram)"></div>');
 			$('.amount:last').focus();
 			$('.ingredient').val("");
 			$('.amount:last').keypress(function(e){

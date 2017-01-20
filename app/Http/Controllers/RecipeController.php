@@ -35,7 +35,10 @@ class RecipeController extends Controller
             'beschrijving' => 'required|max:255',
             'bereidingstijd' => 'required',
             'keuken' => 'required',
+            'image' => 'required',
+
         ]);
+
         // place data from the ingredient and amount array into 1 array
         $array = array();
     	for ($i=0; $i < count($request->ingredient); $i++) { 
@@ -45,6 +48,8 @@ class RecipeController extends Controller
            array_push($array, $amount);
         }
         // convert the just made array into a json string that will be saved in the database
+        $image = (string)$request->image;
+
         $ingredient = json_encode($array);
 
         // remove \r\n from any given text inside the steps
@@ -60,7 +65,7 @@ class RecipeController extends Controller
             'ingredient' => $ingredient,
             'stappen' => $json_steps,
             'personen' => $request->personen,
-            'image' => $request->image,
+            'afbeelding' => $image,
             'keuken' => $request->keuken,
             'user_id' => Auth::user()->id,
         ]);
