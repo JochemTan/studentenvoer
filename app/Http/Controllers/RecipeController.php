@@ -57,7 +57,7 @@ class RecipeController extends Controller
         // convert array into a json string that will be saved in the database
         $json_steps = json_encode($steps);
         // create a recipe with the given data
-
+        $keuken = (int)$request->keuken;
         $recept->create([
             'naam' => $request->naam,
             'beschrijving' => $request->beschrijving,
@@ -66,7 +66,7 @@ class RecipeController extends Controller
             'stappen' => $json_steps,
             'personen' => $request->personen,
             'afbeelding' => $image,
-            'keuken_id' => $request->keuken,
+            'keuken_id' => $keuken,
             'user_id' => Auth::user()->id,
         ]);
         return redirect('/');
