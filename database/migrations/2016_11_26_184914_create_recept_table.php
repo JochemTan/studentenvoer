@@ -21,7 +21,7 @@ class CreateReceptTable extends Migration
             $table->text('stappen');
             $table->string('personen');
             $table->string('afbeelding');
-            $table->integer('rating');
+            $table->integer('rating')->nullable();
             $table->integer('keuken_id');
             $table->integer('user_id');
             $table->timestamps();
