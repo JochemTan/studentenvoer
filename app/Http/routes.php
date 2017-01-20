@@ -14,12 +14,12 @@ Route::get('/','RecipeController@overview');
 // Route::get('/','HomeController@index');
 // Routes for recipes
 Route::get('/recipe/{id}','RecipeController@index');
-Route::get('/addrecipe','RecipeController@add');
-Route::post('/addrecipe','RecipeController@create');
+Route::get('/addrecipe','RecipeController@add')->middleware('auth');
+Route::post('/addrecipe','RecipeController@create')->middleware('auth');
 
-Route::get('/mijnrecept','RecipeController@myRecipe');
-Route::get('/recept/edit/{id}','RecipeController@edit');
-Route::post('/recept/edit/{id}','RecipeController@update');
+Route::get('/mijnrecept','RecipeController@myRecipe')->middleware('auth');
+Route::get('/recept/edit/{id}','RecipeController@edit')->middleware('auth');
+Route::post('/recept/edit/{id}','RecipeController@update')->middleware('auth');
 // delete recept
-Route::post('/recipe/delete/{id}','RecipeController@delete');
+Route::post('/recipe/delete/{id}','RecipeController@delete')->middleware('auth');
 Route::auth();
