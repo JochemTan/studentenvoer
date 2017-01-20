@@ -66,7 +66,7 @@ class RecipeController extends Controller
             'stappen' => $json_steps,
             'personen' => $request->personen,
             'afbeelding' => $image,
-            'keuken' => $request->keuken,
+            'keuken_id' => $request->keuken,
             'user_id' => Auth::user()->id,
         ]);
         return redirect('/');
