@@ -34,7 +34,7 @@
       <option value="2">Option 2</option>
       <option value="3">Option 3</option> --}}
     </select>
-    <label>Materialize Select</label>
+    <label>Keuken</label>
   </div>
         
 			</div>
@@ -57,8 +57,10 @@
 		</div>
 		<div class="card-panel">
 			<div class="inline">
-				<h5 class="h5title">Voeg stappen toe</h5>{{-- <button class="btn btn-primary addstep">stap toevoegen</button> --}}
+				<h5 class="h5title">Stappen</h5>{{-- <button class="btn btn-primary addstep">stap toevoegen</button> --}}
+				{{-- <p>het</p> --}}
 				 <a class="btn-floating btn-large waves-effect waves-light red addstep"><i class="material-icons">add</i></a>
+				 <p class="grey-text">Verwijder de text uit een stap om de stap te verwijderen</p>
 			<br>
 			<br>
 

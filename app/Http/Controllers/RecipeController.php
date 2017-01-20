@@ -92,6 +92,7 @@ class RecipeController extends Controller
 
     public function update($id, Request $request)
     {
+        // dd($request->all());
         $this->validate($request,[
             'naam' => 'required|max:255',
             'beschrijving' => 'required|max:255',
@@ -115,10 +116,12 @@ class RecipeController extends Controller
         // convert array into a json string that will be saved in the database
         $json_steps = json_encode($steps);
         // create a recipe with the given data
+        // dd($request->all());
         $recept = Recept::findOrFail($id);
         $recept->naam = $request->naam;
         $recept->beschrijving = $request->beschrijving;
         $recept->bereidingstijd = $request->bereidingstijd;
+        $recept->personen = $request->personen;
         $recept->ingredient = $ingredient;
         $recept->stappen = $json_steps;
         $recept->afbeelding = $request->image;
